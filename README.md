@@ -1,115 +1,60 @@
-Welcome to my version of celebrating America's 250th birthday - exploring the communities that make a home and give us a reason to care. Enough soapboxing. There was so much interest in this that I've had to get creative. Caveat: I am not Facebook friends with everyone. I rarely use FB these days. My page is a little hard to find if you know me as Beth Carron. Please feel free to share my information. Permissions are set so that guests can invite friends.
+Welcome to my version of celebrating America's 250th birthday, where we explore the communities that make a home and give us a reason to keep on caring. Enough soapboxing. There was so much interest in this that I've had to get creative. 
+
+*Caveat:* I rarely use Facebook these day and am not FB friends with everyone...yet. My page is a little hard to find as I use my full name of Elizabeth Lee. Please feel free to share this event with those you know would want to join. Permissions are set so that guests can invite friends.
 
 
-LINKS
+# Important links #
 
-I posted the rules, the html, a PDF copy of the passport book, and the calendar import to my Github: https://github.com/elleecarron/boston-historical-neighborhood-bar-tour
+- [Github repository for all documents and app](https://github.com/elleecarron/boston-historical-neighborhood-bar-tour)
 
-- Google Map: https://www.google.com/maps/d/edit?mid=1ewU5_wi6njqh5ZxD6L0z03i-OB_ZVRc&usp=sharing
+- [Shortcut to open the Interactive Google map](https://www.google.com/maps/d/edit?mid=1ewU5_wi6njqh5ZxD6L0z03i-OB_ZVRc&usp=sharing)
 
-- Digital passport book: https://elleecarron.github.io/boston-historical-neighborhood-bar-tour/
-
-
-COMMUNICATION
-
-I can facilitate a text group, this Facebook page, or WhatsApp. Post your preference in the comments, or text or DM me directly. I have had terrible luck in organizing in the past so let's go with the flow this time. 
+- [Shortcut open the interactive digital passport](https://elleecarron.github.io/boston-historical-neighborhood-bar-tour/)
 
 
-THE GOAL
-
-1. Visit all 26 bars across 23 Boston neighborhoods.
-2. Collect stamps.
-3. Teach me something new about Boston.
+The map and digital passport with works in any broswser, but you'll want to stick to one device. Your stamps will save as a temporary local file on it. 
 
 
-HOW LONG ARE WE DOING THIS
+# Communication preferences #
 
-May 1 – August 31, 2026 
+- [Facebook group page](https://www.facebook.com/share/g/17ZEpPxFTr/)
+- I can facilitate a text group or a WhatsApp group. Post your preference in the comments, or text or DM me directly. I have had terrible luck in organizing in the past so let's go with the flow this time. 
 
 
-HOW IT WORKS
+# What's the goal? #
 
-Getting started
-Open the digital passport at the link below. It runs in your phone browser. Your stamps save automatically to your device.
+1. Visit all 26 bars across all 23 Boston neighborhoods - explore!
+2. Collect stamps - learn!
+3. Teach me something new about Boston - learn!
 
-Visiting a bar
+
+# How long are we doing this? #
+
+The contest is open from May 1 – August 15, 2026. You can do it on your own, with your families, in small groups, or during one of the prescheduled crawl dates. 
+
+# How do you participate? #
+
+## Getting started ##
+Open the digital passport at the link below. It runs in your phone browser. Your stamps save automatically to your device. If you tap on one of the bars, a drop-down should appear that gives you a brief history of the neighborhood, the bar, and the question to answer in order to know what to drink (or not drink, do what you want!).  
+
+## Visiting a bar ##
 Go in any order, at any time, with anyone you like. Each bar is worth one stamp. All 26 count equally.
 
-Proving your visit
-Take a photo at the bar and share it to the group. The honor system applies, but the photo is the handshake.
+## Proving your visit ##
+Take a photo at the bar and be prepared to share it with the group. It can be a group photo, a selfie, or a lovely photo of your drink surrounded by artfully placed coasters. 
 
-Stamping your passport
-Tap the circle on your digital passport to mark each stop. You manage your own; it runs locally on your device, so I can't see it. 
+## Stamping your passport ##
+At the bottom of the dropdown is a circle you can tap to "stamp" your visit. 
 
+## Prizes! ##
+- A special prize will go to the first person who teaches me something genuinely new about a Boston neighborhood — its history, engineering, culture, community, or built environment — that I did not already know or know well. Yes, it's subjective. I promise I don't know everything.
+- There will also be a prize for the first person(s) to complete all 26 stops.
+- I reserve the right to give out prizes for absolutely no reason up to and including your general awesomeness.
 
-THE PRIZE
-The grand prize goes to the first person who teaches me something genuinely new about a Boston neighborhood — its history, engineering, culture, community, or built environment — that I did not already know or know well. Yes, it's subjective. I promise I don't know everything.
+# Tentatively scheduled group bar crawls #
 
-There will also be a prize for the first person(s) to complete all 26 stops. And I reserve the right to give out prizes for absolutely no reason up to and including your general awesomeness.
-
-
-TENTATIVE GROUP CRAWLS - OPTIONAL, COME TO AS MANY OR AS FEW AS YOU LIKE
-
-Cluster 1: Downtown
-Bell in Hand · Sevens Ale House · Sullivan's Tap · Jacques Cabaret · Oak Long Bar · J.J. Foley's Cafe
-Thursday May 15, 6:30pm
-
-Cluster 2: Waterfront & North
-Warren Tavern · Caffe Vittoria · Kelley Square Pub · The Barking Crab
-Saturday June 7, 1:00pm — the ferries will be running, don't worry
-
-Cluster 3: Chinatown & Fenway
-The Tam · China Pearl · Mission Bar & Grill · Cask 'n Flagon · Victoria's Diner
-Tuesday July 1, 6:00pm
-
-Cluster 4: Roxbury, Southie & Dorchester
-Fort Hill Bar & Grill · Slade's Bar & Grill · Amrheins · Eire Pub
-Saturday July 19, 2:00pm
-
-Cluster 5: Outer Neighborhoods
-Silhouette Lounge · Corrib Pub Brighton · Midway Cafe · Pleasant Cafe · Corrib Pub West Roxbury · Simco's on the Bridge · Roundhead Brewing
-Saturday August 1, 11:00am - let's brunch!
-
-- I posted the rules, the html, a PDF copy of the passport book, and the calendar import to my Github: https://github.com/.../boston-historical-neighborhood-bar...
-
-COMMUNICATION
-- I can facilitate a text group, this Facebook page, or WhatsApp. Post your preference in the comments, or text or DM me directly. I have had terrible luck in organizing in the past so let's go with the flow this time.
-- Facebook @carronelizabeth
-- Inst @thealizabe
-THE GOAL
-1. Visit all 26 bars across 23 Boston neighborhoods.
-2. Collect stamps.
-3. Teach me something new about Boston.
-
-HOW LONG ARE WE DOING THIS
-- May 1 – August 31, 2026
-
-HOW IT WORKS
-- Getting started: Open the digital passport at the link below. It runs in your phone browser. Your stamps save automatically to your device.
-
-- Visiting a bar: Go in any order, at any time, with anyone you like. Each bar is worth one stamp. All 26 count equally.
-
-- Proving your visit: Take a photo at the bar and share it to the group. The honor system applies, but the photo is the handshake.
-
-- Stamping your passport: Tap the circle on your digital passport to mark each stop. You manage your own; it runs locally on your device, so I can't see it.
-
-THE PRIZE
-- The grand prize goes to the first person who teaches me something genuinely new about a Boston neighborhood — its history, engineering, culture, community, or built environment — that I did not already know or know well. Yes, it's subjective. I promise I don't know everything.
-There will also be a prize for the first person(s) to complete all 26 stops. And I reserve the right to give out prizes for absolutely no reason up to and including your general awesomeness.
-
-TENTATIVE GROUP CRAWLS - OPTIONAL, COME TO AS MANY OR AS FEW AS YOU LIKE
-- Cluster 1: Downtown -- Thursday May 15, 6:30pm
-Bell in Hand · Sevens Ale House · Sullivan's Tap · Jacques Cabaret · Oak Long Bar · J.J. Foley's Cafe
-
-- Cluster 2: Waterfront -- Saturday June 7, 1:00pm (the ferries will be running, don't worry)
-Warren Tavern · Caffe Vittoria · Kelley Square Pub · The Barking Crab
-
-- Cluster 3: Chinatown & Fenway -- Tuesday July 1, 6:00pm
-The Tam · China Pearl · Mission Bar & Grill · Cask 'n Flagon · Victoria's Diner
-
-- Cluster 4: Roxbury, Southie & Dorchester -- Saturday July 19, 2:00pm
-Fort Hill Bar & Grill · Slade's Bar & Grill · Amrheins · Eire Pub
-
-- Cluster 5: Outer Neighborhoods -- Saturday August 1, 11:00am (brunch involved)
-Silhouette Lounge · Corrib Pub Brighton · Midway Cafe · Pleasant Cafe · Corrib Pub West Roxbury · Simco's on the Bridge · Roundhead Brewing
-
+1. Downtown, Thursday May 15th @ 6pm: Bell in Hand, Sevens Ale House, Sullivan's Tap, Jacques Cabaret, Oak Long Bar, J.J. Foley's Cafe
+2. Waterfront, Saturday June 7th @ 11am (kickoff brunch): Warren Tavern, Caffe Vittoria, Kelley Square Pub, The Barking Crab (the ferries will be running!)
+3. Chinatown/Leather District/Fenway-Kenmore, July 1st @ 6pm: The Tam, China Pearl, Mission Bar & Grill, Cask 'n Flagon
+4. Roxbury, Southie & Dorchester, Saturday July 19th @ 2pm: Fort Hill Bar & Grill, Slade's Bar & Grill, Amrheins, Eire Pub, Victoria's Diner
+5. Outer Neighborhoods, Saturday August 1 @ 11am (kickoff brunch): Silhouette Lounge, Corrib Pub Brighton, Midway Cafe, Pleasant Cafe, Corrib Pub West Roxbury, Simco's on the Bridge, Roundhead Brewing
