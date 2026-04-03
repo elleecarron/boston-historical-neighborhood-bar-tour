@@ -7,7 +7,7 @@ LINKS
 - I posted the rules, the html, a PDF copy of the passport book, and the calendar import to my Github: https://github.com/.../boston-historical-neighborhood-bar...
 
 COMMUNICATION
-I can facilitate a text group, this Facebook page, or WhatsApp. Post your preference in the comments, or text or DM me directly. I have had terrible luck in organizing in the past so let's go with the flow this time.
+- I can facilitate a text group, this Facebook page, or WhatsApp. Post your preference in the comments, or text or DM me directly. I have had terrible luck in organizing in the past so let's go with the flow this time.
 
 THE GOAL
 1. Visit all 26 bars across 23 Boston neighborhoods.
@@ -15,7 +15,7 @@ THE GOAL
 3. Teach me something new about Boston.
 
 HOW LONG ARE WE DOING THIS
-May 1 – August 31, 2026
+- May 1 – August 31, 2026
 
 HOW IT WORKS
 Getting started
