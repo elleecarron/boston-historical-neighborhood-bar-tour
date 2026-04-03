@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Boston Bars">
+<meta name="theme-color" content="#0D1828">
+<title>Boston Historical Bars Tour 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1B2A4A;--dark:#0D1828;--panel:#152038;
+  --pink:#E84393;--purple:#8B1FA8;--coral:#F23355;
+  --teal:#1A7A7A;--teal-lt:#1AADAD;--orange:#F5820D;
+  --white:#fff;--off:#C8D0E0;--grey:#7888AA;--dim:#2A3A5A;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;overflow:hidden}
+body{font-family:'DM Sans',sans-serif;background:var(--dark);color:var(--white);display:flex;flex-direction:column}
+
+/* VIEWS */
+.view{display:none;flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:60px}
+.view.active{display:block}
+
+/* COVER */
+#cover{background:var(--dark);padding-bottom:80px}
+.cover-stripe{height:5px;background:linear-gradient(90deg,var(--pink),var(--coral),var(--orange));flex-shrink:0}
+.cover-body{padding:1.5rem 1.25rem 2rem}
+.cover-meta{font-size:10px;letter-spacing:.18em;color:var(--grey);text-transform:uppercase;margin-bottom:1.5rem}
+.cover-hl{font-family:'Bebas Neue',sans-serif;line-height:.88;margin-bottom:1.25rem}
+.cover-hl .l1{font-size:clamp(68px,20vw,100px);color:var(--white);display:block}
+.cover-hl .l2{font-size:clamp(68px,20vw,100px);color:var(--pink);display:block}
+.cover-hl .l3{font-size:clamp(68px,20vw,100px);color:var(--orange);display:block}
+.cover-rule{height:2px;background:linear-gradient(90deg,var(--coral),var(--teal-lt));margin-bottom:1rem}
+.cover-sub{font-size:10px;letter-spacing:.18em;color:var(--coral);text-transform:uppercase;font-weight:700;margin-bottom:2rem}
+.cover-tags p{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:.04em;line-height:1.5}
+.cover-tags p:nth-child(1){color:var(--white)}
+.cover-tags p:nth-child(2){color:var(--pink)}
+.cover-tags p:nth-child(3){color:var(--orange)}
+.cover-prog{margin:1.5rem 0}
+.cover-prog-top{display:flex;justify-content:space-between;font-size:10px;color:var(--grey);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+.prog-bar{height:4px;background:var(--dim);border-radius:2px;overflow:hidden}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--pink),var(--orange));border-radius:2px;transition:width .4s ease;width:0%}
+.cover-btns{display:flex;flex-direction:column;gap:.75rem;margin-bottom:1.5rem}
+.cbtn{padding:.9rem 1rem;border:none;border-radius:8px;font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:.08em;cursor:pointer;text-align:center;transition:opacity .15s}
+.cbtn:active{opacity:.8}
+.cbtn-solid{background:var(--pink);color:var(--white)}
+.cbtn-outline{background:transparent;border:1.5px solid var(--teal-lt);color:var(--teal-lt)}
+.cover-legend{display:flex;gap:1.25rem;padding-top:1.25rem;border-top:1px solid var(--dim)}
+.leg{display:flex;align-items:center;gap:6px;font-size:10px;color:var(--grey);letter-spacing:.06em}
+.leg-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+
+/* PASSPORT */
+#passport{background:var(--navy)}
+.phead{background:var(--dark);padding:.85rem 1.25rem;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid var(--pink);position:sticky;top:0;z-index:50}
+.phead-title{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:.05em}
+.phead-count{font-size:10px;color:var(--pink);font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.psubhead{padding:.65rem 1.25rem;background:var(--panel);border-bottom:1px solid var(--dim)}
+.psubhead .prog-fill{transition:width .4s ease}
+.psub-label{font-size:10px;color:var(--grey);letter-spacing:.07em;text-transform:uppercase;margin-top:4px}
+
+/* BAR CARDS */
+.bar-card{margin:.65rem .85rem;background:var(--panel);border-radius:10px;overflow:hidden;border:1px solid var(--dim);transition:border-color .2s}
+.bar-card.stamped{border-color:var(--pink)}
+.card-top{display:flex;align-items:center;padding:.85rem .9rem;gap:.75rem;cursor:pointer;user-select:none}
+.card-num{font-family:'Bebas Neue',sans-serif;font-size:26px;line-height:1;min-width:30px;color:var(--dim);transition:color .2s;padding-top:1px}
+.bar-card.stamped .card-num{color:var(--pink)}
+.card-info{flex:1;min-width:0}
+.card-nb{font-size:8px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;margin-bottom:1px}
+.card-name{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:.03em;line-height:1.1;color:var(--white)}
+.card-yr{font-size:10px;color:var(--grey)}
+.stamp-ring{width:42px;height:42px;border-radius:50%;border:2px dashed var(--dim);display:flex;align-items:center;justify-content:center;flex-shrink:0;cursor:pointer;transition:all .2s;background:transparent}
+.stamp-ring.stamped{border-style:solid;border-color:var(--pink);background:var(--pink)}
+.stamp-ring svg{width:18px;height:18px;opacity:0;transition:opacity .2s}
+.stamp-ring.stamped svg{opacity:1}
+.card-detail{display:none;padding:0 .9rem .9rem;border-top:1px solid var(--dim)}
+.card-detail.open{display:block}
+.det-lbl{font-size:8px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;margin:1rem 0 .3rem;display:block}
+.det-txt{font-size:12.5px;line-height:1.75;color:var(--off)}
+.trivia-card{background:var(--dark);border-radius:8px;padding:.9rem;margin-top:.9rem;border-left:3px solid var(--coral)}
+.trivia-lbl{font-size:8px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--coral);margin-bottom:.4rem;display:block}
+.trivia-q{font-style:italic;font-size:12.5px;line-height:1.65;color:var(--off);margin-bottom:.75rem}
+.answer-row{display:flex;align-items:center;gap:8px}
+.answer-lbl{font-size:9px;color:var(--grey);white-space:nowrap;letter-spacing:.06em;text-transform:uppercase}
+.answer-line{flex:1;height:1px;background:var(--coral);opacity:.6}
+.action-row{display:flex;gap:.6rem;margin-top:.85rem}
+.act-btn{flex:1;padding:.7rem;border:none;border-radius:6px;font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.07em;cursor:pointer;transition:opacity .15s}
+.act-btn:active{opacity:.8}
+.btn-stamp{background:var(--pink);color:var(--white)}
+.btn-unstamp{background:var(--dim);color:var(--grey)}
+.btn-map{background:var(--teal);color:var(--white);flex:0 0 auto;padding:.7rem .9rem;text-decoration:none;display:flex;align-items:center;justify-content:center;border-radius:6px;font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.07em}
+
+/* STAMPS GRID */
+#stamps{background:var(--navy);padding-bottom:80px}
+.stamps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.55rem;padding:.85rem}
+.s-tile{aspect-ratio:1;border-radius:8px;border:1.5px dashed var(--dim);display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;padding:3px;background:var(--panel)}
+.s-tile.earned{border-style:solid}
+.s-tile-num{font-family:'Bebas Neue',sans-serif;font-size:20px;line-height:1;color:var(--dim);transition:color .2s}
+.s-tile.earned .s-tile-num{color:var(--white)}
+.s-tile-name{font-size:6.5px;text-align:center;color:var(--grey);line-height:1.3;margin-top:2px}
+.s-tile.earned .s-tile-name{color:var(--off)}
+
+/* BOTTOM NAV */
+.bnav{height:60px;background:var(--dark);border-top:1px solid var(--dim);display:flex;flex-shrink:0;padding-bottom:env(safe-area-inset-bottom)}
+.ntab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;cursor:pointer;background:none;border:none;color:var(--grey);transition:color .15s;padding:.4rem 0}
+.ntab.active{color:var(--pink)}
+.ntab svg{width:21px;height:21px}
+.ntab-lbl{font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+
+@keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.4)}70%{transform:scale(.92)}100%{transform:scale(1)}}
+.popping{animation:pop .32s ease forwards}
+</style>
+</head>
+<body>
+
+<div id="cover" class="view active">
+  <div class="cover-stripe"></div>
+  <div class="cover-body">
+    <div class="cover-meta">26 stops &nbsp;·&nbsp; 23 neighborhoods &nbsp;·&nbsp; Est. 1630</div>
+    <div class="cover-hl">
+      <span class="l1">BOSTON</span>
+      <span class="l2">BAR</span>
+      <span class="l3">TOUR.</span>
+    </div>
+    <div class="cover-rule"></div>
+    <div class="cover-sub">Historical Bars Passport &nbsp;2026</div>
+    <div class="cover-tags">
+      <p>Visit every bar.</p>
+      <p>Answer the trivia.</p>
+      <p>Order the answer.</p>
+    </div>
+    <div class="cover-prog">
+      <div class="cover-prog-top">
+        <span>Your progress</span>
+        <span id="cov-count">0 / 26 stamped</span>
+      </div>
+      <div class="prog-bar"><div class="prog-fill" id="cov-fill"></div></div>
+    </div>
+    <div class="cover-btns">
+      <button class="cbtn cbtn-solid" onclick="show('passport')">Open Passport</button>
+      <button class="cbtn cbtn-outline" onclick="show('stamps')">View Stamps</button>
+    </div>
+    <div class="cover-legend">
+      <div class="leg"><div class="leg-dot" style="background:var(--coral)"></div>Pre-1933</div>
+      <div class="leg"><div class="leg-dot" style="background:var(--teal-lt)"></div>Post-1933</div>
+    </div>
+  </div>
+</div>
+
+<div id="passport" class="view">
+  <div class="phead">
+    <div class="phead-title">Boston Bar Tour 2026</div>
+    <div class="phead-count" id="p-count">0 / 26</div>
+  </div>
+  <div class="psubhead">
+    <div class="prog-bar"><div class="prog-fill" id="p-fill"></div></div>
+    <div class="psub-label" id="p-label">0 of 26 stops stamped</div>
+  </div>
+  <div id="bar-list"></div>
+</div>
+
+<div id="stamps" class="view">
+  <div class="phead">
+    <div class="phead-title">Your Stamps</div>
+    <div class="phead-count" id="s-count">0 / 26</div>
+  </div>
+  <div class="stamps-grid" id="stamps-grid"></div>
+</div>
+
+<nav class="bnav">
+  <button class="ntab" onclick="show('cover')" id="tab-cover">
+    <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/></svg>
+    <span class="ntab-lbl">Home</span>
+  </button>
+  <button class="ntab active" onclick="show('passport')" id="tab-passport">
+    <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>
+    <span class="ntab-lbl">Passport</span>
+  </button>
+  <button class="ntab" onclick="show('stamps')" id="tab-stamps">
+    <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+    <span class="ntab-lbl">Stamps</span>
+  </button>
+</nav>
+
+<script>
+const BARS = [{"neighborhood": "Allston", "bar_name": "Silhouette Lounge", "address": "200 Brighton Avenue, Allston, MA 02134", "year_established": "1964", "latitude": 42.3531, "longitude": -71.1344, "neighborhood_history": "Named after Romantic painter Washington Allston (1779–1843), Allston is the only community in the United States named for an artist. Originally part of Brighton, it was annexed by Boston in 1874 after a century as a mixed industrial and working-class district. By the late 20th century it had reinvented itself as a hub for students and the beating heart of Boston's indie music scene.", "bar_history": "Named after a doo-wop group, the Silhouette opened in 1964 — the exact year doo-wop was being swept aside by the British Invasion, with the Beatles landing in America just months earlier in February. It has operated as a neighborhood bar ever since, surviving the student waves and rent increases that have transformed almost everything else on Brighton Avenue. The name outlasted the musical era that inspired it by about sixty years.", "trivia_question": "In 1964, Congress declared one American spirit a \"distinctive product of the United States,\" giving it the same protected status as French Champagne. What was it?"}, {"neighborhood": "Back Bay", "bar_name": "Oak Long Bar and Kitchen", "address": "138 St James Avenue, Boston, MA 02116", "year_established": "2013", "latitude": 42.3491, "longitude": -71.0762, "neighborhood_history": "The name is literal. Back Bay was once a tidal bay behind the original Shawmut Peninsula, filled in between the 1850s and 1880s with gravel hauled by train from Needham in one of the largest urban engineering projects of the 19th century. Unlike every other Boston neighborhood, it was built on a grid from scratch, with wide Parisian-style avenues planned in advance. The result is Boston's only fully designed neighborhood, and the one most likely to appear on a greeting card.", "bar_history": "The Copley Plaza opened in 1912 and its bar has operated in various forms ever since, surviving Prohibition by reinventing itself as the Merry-Go-Round Bar — complete with a working carousel inside the room. Decades of renovations eventually stripped every piece of actual oak from the space, so when it was redesigned as OAK Long Bar in 2013, the designers had to source new oak and put it back. The bar is now older than the building's most famous guests.", "trivia_question": "The Copley Plaza's bar survived Prohibition by reinventing itself as the Merry-Go-Round Bar. What gin-based cocktail, served in a V-shaped glass with an olive, was the signature drink of golden age hotel bars?"}, {"neighborhood": "Bay Village", "bar_name": "Jacques Cabaret", "address": "79 Broadway Street, Boston, MA 02116", "year_established": "1938", "latitude": 42.35, "longitude": -71.0674, "neighborhood_history": "Bay Village is Boston's smallest neighborhood, just a single cluster of Federal-style brick rowhouses tucked between the Theater District and the South End, developed on filled tidal land in the 1820s. Edgar Allan Poe was born here in 1809, in a rooming house on Carver Street, before the neighborhood existed in its current form. By the mid-20th century it had become a center of Boston's theater trade and LGBTQ+ nightlife, a role it has never entirely given up.", "bar_history": "Jacques opened in 1938 as a neighborhood tavern, became a gay bar by the mid-1940s, and served as Boston's only lesbian bar during the early 1970s — making it the oldest continuously operating LGBTQ+ establishment in the city. Its founder, Henry Vara, was at one point the largest holder of liquor licenses in Boston; he also owned Studio 54 in New York City. The original booklet for this passport omitted Jacques' full LGBTQ+ history, which has been restored in this edition.", "trivia_question": "What sparkling wine, named after a region in northeastern France, is traditionally associated with celebration and cabaret culture?"}, {"neighborhood": "Beacon Hill", "bar_name": "Sevens Ale House", "address": "77 Charles Street, Boston, MA 02114", "year_established": "1933", "latitude": 42.3583, "longitude": -71.0704, "neighborhood_history": "Beacon Hill takes its name from the iron beacon that once stood on its summit to warn colonists of approaching ships. The hill itself was later cut down by 60 feet to fill in Mill Pond. Developed as an affluent residential district from the 1790s onward, it became the political heart of Massachusetts and a crucial node of the abolitionist movement, home to the African Meeting House, the oldest surviving Black church building in the United States. Its gas-lit, cobblestoned streets are among the most intact Federal-period streetscapes in the country.", "bar_history": "The Sevens opened the year Prohibition ended — 1933 — and has sold only beer and wine ever since, a policy it has never changed. Family-owned and operated throughout its history, it was one of only two Boston bars to tap the very first kegs of Harpoon Ale on June 2, 1987, the day the brewery opened; the other was Doyle's Café in Jamaica Plain. Both bars were chosen because the brewery trusted them.", "trivia_question": "On June 2, 1987, the Sevens was one of only two Boston bars to tap the first kegs of a brewery that held Massachusetts Brewing Permit #001. What brewery was it?"}, {"neighborhood": "Brighton", "bar_name": "Corrib Pub", "address": "396 Market Street, Brighton, MA 02135", "year_established": "1968", "latitude": 42.3499, "longitude": -71.1528, "neighborhood_history": "Brighton was an independent town from 1807 until its annexation by Boston in 1874, and for most of the 19th century it was best known for its stockyards. The cattle market along Market Street made it the meatpacking hub of New England. The livestock trade drew Irish laborers who built a tight-knit community that has shaped the neighborhood ever since, founding its first Catholic church in 1855. The yards are gone, but the Irish pubs are not.", "bar_history": "In 1968, Hughie Bligh bought a bar on Market Street called McMahon's and renamed it after Lough Corrib — the second-largest lake in Ireland, in County Galway, near where Bligh grew up. The pub became a neighborhood anchor in a part of Brighton that had been shaped by Irish cattle workers since the 1850s, and it has stayed that way across more than five decades of ownership and change.", "trivia_question": "What dark Irish stout, first brewed at St. James's Gate Brewery in Dublin in 1759, would founder Hughie Bligh have grown up drinking back in Roscommon?"}, {"neighborhood": "Charlestown", "bar_name": "Warren Tavern", "address": "2 Pleasant Street, Charlestown, MA 02129", "year_established": "1780", "latitude": 42.3742, "longitude": -71.0632, "neighborhood_history": "Charlestown was established in 1628 -  two years before Boston itself - making it one of the oldest English settlements in Massachusetts, named after King Charles I. British troops burned it to the ground during the Battle of Bunker Hill in June 1775; within five years residents had rebuilt it almost entirely from scratch. The Warren Tavern was among the first structures to rise from the ashes.", "bar_history": "Built in 1780 by Captain Eliphelet Newell from beams salvaged at the Charlestown Navy Yard, the Warren Tavern was one of the first structures raised from the ashes after British troops burned the town during the Battle of Bunker Hill. Named for Dr. Joseph Warren — patriot, physician, and martyr of Bunker Hill — it became a gathering place for the new republic's most prominent figures; Paul Revere presided here as Grand Master of the Freemasons, and George Washington visited in 1789. It closed in the early 20th century and reopened as a tavern in 1972.", "trivia_question": "What herbal ingredient — once prescribed by colonial doctors as a medicinal remedy — became a staple of the American cocktail and is found in both an Old Fashioned and a Manhattan?"}, {"neighborhood": "Chinatown / Leather District", "bar_name": "The Tam (Leather District)", "address": "222 Tremont Street, Boston, MA 02116", "year_established": "c. 1940", "latitude": 42.3515, "longitude": -71.0646, "neighborhood_history": "The Leather District takes its name from the tanneries and warehouses that filled the blocks after the Great Fire of 1872; the red brick industrial buildings from the 1880s-1920s still stand, now converted into bars and lofts. Developed on filled land from the 1830s onward, it occupies one of Boston's oldest industrial corridors. The City of Boston officially designates it as a single combined neighborhood with Chinatown.", "bar_history": "The Tam opened sometime in the 1940s on Tremont Street and has become one of the city's most beloved dive bars — cash only, no frills, still operating while the neighborhood around it has been almost entirely rebuilt. Its address at 222 Tremont Street sits on the border of the Leather District and the Theater District; the attribution has never been formally settled. It appeared erroneously as the Mattapan entry in earlier editions of this passport.", "trivia_question": "Boston's sailors drank a distinctive shipboard mixture of rum cut with water and sometimes lime juice. What was it called?"}, {"neighborhood": "Chinatown / Leather District", "bar_name": "China Pearl (Chinatown)", "address": "9 Tyler Street, Boston, MA 02111", "year_established": "1960", "latitude": 42.351, "longitude": -71.0608, "neighborhood_history": "Chinatown formed in the 1870s when Chinese immigrants - barred from most industries by law and custom - settled in the South Cove and built laundries, restaurants, and community institutions along Tyler and Beach Streets. The Chinese Exclusion Act of 1882 kept the community almost entirely male for decades, yet it endured and is today the only surviving historic Chinatown in New England.", "bar_history": "China Pearl has been the oldest Chinese restaurant in Boston since it opened in 1960, though the building housed Chinese dining as far back as 1935. The Moy family has been part of Chinatown since the 1880s and has shaped its identity across generations. Ricky Moy purchased China Pearl in the late 1980s after arriving in Boston in the 1960s and working his way up as a busser; his son Brian later opened Shōjō on the ground floor.", "trivia_question": "What rum-based tiki cocktail, invented in 1944 by Trader Vic Bergeron and made with rum, orgeat, orange curaçao, and lime, became one of the most ordered drinks of the mid-century tiki era?"}, {"neighborhood": "Dorchester", "bar_name": "Eire Pub", "address": "795 Adams Street, Boston, MA 02124", "year_established": "1963", "latitude": 42.283, "longitude": -71.0561, "neighborhood_history": "Dorchester was founded weeks before Boston in 1630 and holds a string of American firsts: the first town meeting in the New World in 1633, and the nation's first tax-supported public school in 1639. Annexed by Boston in 1870, it became the city's largest and most diverse neighborhood, absorbing successive waves of Irish, Jewish, Italian, Black, Caribbean, Cape Verdean, and Vietnamese communities over four centuries. To identify a true local, listen for the accent that drops both Rs in 'Dorchester.'", "bar_history": "Founded in 1963 by Tom Stenson, an Irish immigrant, the Eire Pub began as a men's-only bar and remained one for years before opening to all. Presidents Reagan and Clinton visited, as did the Irish Taoiseach; stopping at the Eire became an unofficial rite of passage for political candidates seeking a Dorchester endorsement. Jimmy Hayes gave the pub his first NHL jersey when he made it to the pros, and it still hangs on the wall.", "trivia_question": "What spirit, distilled from malted barley and aged in oak, is Ireland's most famous export and the backbone of an Irish Coffee?"}, {"neighborhood": "Downtown", "bar_name": "Bell in Hand Tavern", "address": "45 Union Street, Boston, MA 02108", "year_established": "1795", "latitude": 42.3616, "longitude": -71.0571, "neighborhood_history": "Boston's civic and commercial core since the colony's founding in 1630, Downtown has always been where deals were made and revolutions were plotted. Daniel Webster once called the Green Dragon Tavern on Union Street the 'headquarters of the American Revolution.' The Great Fire of 1872 burned through 65 acres and 776 buildings in a single night, and the current streetscape is largely a product of the rebuilding that followed. Its taverns predate the country itself.", "bar_history": "Jimmy Wilson, Boston's last Town Crier, opened the Bell in Hand in 1795 when he retired after fifty years on the job, naming it after the bell he had carried through the streets to announce public news — the Boston Tea Party, the Declaration of Independence, the birth of the nation. He refused to sell hard liquor, serving only ale, a policy that held for the tavern's first century. It is America's oldest continuously operating tavern.", "trivia_question": "Founder Jimmy Wilson sold only ale and refused all spirits for the tavern's first century. What style of beer, brewed from malted barley, would a colonial-era patron have ordered here?"}, {"neighborhood": "East Boston", "bar_name": "Kelley Square Pub", "address": "84 Bennington Street, Boston, MA 02128", "year_established": "1984", "latitude": 42.3762, "longitude": -71.0358, "neighborhood_history": "East Boston sits across Boston Harbor from the rest of the city, a fact that shaped its identity for two centuries. Ferries connected it to downtown long before the Sumner Tunnel opened in 1934. Developed in the 1830s as a center for shipbuilding, it was where legendary clipper ship designer Donald McKay launched vessels that broke speed records around the world. Logan Airport arrived in the 1930s and transformed the economy; today the neighborhood is home to one of Boston's largest Central American communities.", "bar_history": "John Mastrangelo Sr., a native East Bostonian and former boxer, opened the Kelley Square Pub in 1984 and named it after the original 1900s name for what had become Central Square — a name most people had forgotten. Mastrangelo's insistence on using the old name helped revive it so effectively that East Boston officially restored Kelley Square to the maps. The pub has been a neighborhood fixture ever since.", "trivia_question": "What style of rum — distilled from molasses, a byproduct of sugar refining — made colonial Massachusetts one of the rum capitals of the 18th century?"}, {"neighborhood": "Fenway / Kenmore", "bar_name": "Cask 'n Flagon", "address": "62 Brookline Avenue, Boston, MA 02215", "year_established": "1969", "latitude": 42.3473, "longitude": -71.0983, "neighborhood_history": "The name 'Fenway' comes from the Back Bay Fens, the Frederick Law Olmsted-designed parkway completed in 1879. 'Fens' is simply the old English word for marshy lowland, which is exactly what this area was before it was filled. Fenway Park opened on April 20, 1912, just days after the Titanic sank, and has defined the neighborhood ever since. Within a few blocks of the ballpark sit the Museum of Fine Arts, Symphony Hall, and the Isabella Stewart Gardner Museum, making it one of the most culturally dense square miles in America.", "bar_history": "The building on Brookline Avenue was originally a Ford dealership — the original terrazzo floor from the showroom still survives in the event space downstairs. In the 1960s it became Oliver's, a live music venue where Bruce Springsteen, Jimi Hendrix, and the band Boston all performed before it was rechristened the Cask 'n Flagon in 1969 and pivoted toward sports. It has been directly across the street from Fenway Park ever since.", "trivia_question": "What beer cocktail — made by dropping a shot of whiskey into a pint — is the traditional pregame drink of Red Sox fans?"}, {"neighborhood": "Hyde Park", "bar_name": "Roundhead Brewing", "address": "1 Westinghouse Plaza Building 10, Hyde Park, MA 02136", "year_established": "2022", "latitude": 42.2467, "longitude": -71.1311, "neighborhood_history": "Hyde Park was an independent town until 1912, when it became the last neighborhood annexed by Boston, a distinction locals are proud of. Named after its London namesake, it sits along the Neponset River at Boston's southern edge, with a greener and more suburban feel than almost any other neighborhood in the city. The 54th Massachusetts Volunteer Infantry, one of the first Black Civil War regiments, trained at Camp Meigs in the Hyde Park village of Readville.", "bar_history": "Luis Espinoza, a Peruvian-born chef and home brewer, and Craig Panzer met on the sidelines of a Jamaica Plain youth soccer game and went on to found Roundhead Brewing in 2022 inside the 1903 Westinghouse Powerhouse building in Hyde Park. It became Massachusetts' first Latino-owned brewery and was named Best Brewery in Boston by Boston Magazine in 2023. The building they brew in is older than most of the bars in this passport.", "trivia_question": "What Cuban cocktail, made with white rum, lime juice, sugar, and mint, is the most widely consumed Latin cocktail in the world?"}, {"neighborhood": "Jamaica Plain", "bar_name": "Midway Cafe", "address": "3496 Washington Street, Boston, MA 02130", "year_established": "1937", "latitude": 42.3062, "longitude": -71.1075, "neighborhood_history": "Jamaica Plain's name has nothing to do with the Caribbean. It derives from the 17th-century name for Jamaica Pond, which early English colonists thought resembled the tropical landscapes they had heard described. Originally part of Roxbury, it was annexed by Boston in 1874 and developed into a leafy streetcar suburb, later home to a cluster of 19th-century lager breweries along the Stony Brook. Today it is known for its farmers market, the Arnold Arboretum, and one of the longest-running queer nightlife scenes in New England.", "bar_history": "The building opened as a bar in 1937 in the shadow of elevated train tracks on Washington Street; in 1987, Jay and David Balerna bought it specifically for the liquor license. When the elevated Orange Line came down in 1988 the neighborhood changed overnight — suddenly the Midway had a view — and in 1999 Jay added Queeraoke on Thursdays, now one of the longest-running queer nights in New England.", "trivia_question": "On April 7, 1933, the Cullen–Harrison Act made beer legal again after Prohibition. Which St. Louis brewery had its trucks ready at midnight and is most widely credited with delivering the first post-Prohibition commercial beer?"}, {"neighborhood": "Mattapan", "bar_name": "Simco's on the Bridge", "address": "1509 Blue Hill Avenue, Boston, MA 02126", "year_established": "1936", "latitude": 42.2699, "longitude": -71.0921, "neighborhood_history": "Mattapan takes its name from the Massachusett language, most likely meaning 'a place to sit' or 'a good place to land.' Annexed as part of Dorchester in 1870, it developed as a streetcar suburb before rapid demographic change between 1968 and 1970. Driven by a predatory banking consortium called the Boston Banks Urban Renewal Group, it was transformed almost overnight from a predominantly Jewish to a predominantly Black neighborhood. The Mattapan–Ashmont trolley, running vintage 1940s PCC streetcars along the Neponset River since 1929, remains the only non-heritage vintage streetcar service in America.", "bar_history": "Simco's has been a fixture on Blue Hill Avenue since the 1930s, a classic takeout counter famous for its hot dogs, fried seafood, and the unofficial ritual of eating on the bridge railing out front. Listed by the Boston Preservation Alliance as a neighborhood legacy business, it is the oldest continuously operating food and drink establishment in Mattapan — a fact made more striking by the neighborhood's documented history as a near-total liquor license desert. As recently as 2013, Mattapan held just two liquor licenses despite a population of over 35,000; that began to change only after Governor Healey signed legislation in September 2024 bringing 225 new licenses to Boston.", "trivia_question": "Simco's has served Blue Hill Avenue since 1936. The neighborhood's signature drink is a Boston original invented at a Washington Street drugstore counter in the 1880s — lime juice, raspberry syrup, and soda water. What is it called?"}, {"neighborhood": "Mid-Dorchester", "bar_name": "Victoria's Diner", "address": "1024 Massachusetts Avenue, Boston, MA 02118", "year_established": "1949", "latitude": 42.3299, "longitude": -71.0724, "neighborhood_history": "Mid-Dorchester is the spine of Boston's largest and oldest neighborhood, settled in 1630 and built out along Dorchester Avenue and Massachusetts Avenue as the streetcar network expanded in the late 19th century. The dense three-decker housing along its streets - Boston's signature triple-decker wooden apartment buildings - are among the most intact examples of the form anywhere in the city. Like all of Dorchester, it has absorbed wave after wave of immigrant communities, each leaving a permanent mark on its blocks.", "bar_history": "Opened in 1949 by George Georgenes — a Greek immigrant whose family had been running diners in the Boston area since the late 1920s — Victoria's was a brand-new stainless steel Jerry O'Mahony diner car delivered to 1024 Massachusetts Avenue. George's sons Nick and Charlie took over, replaced the car with a new Swingle diner in 1965, and added a back room they called Cafe George in their father's honor. Mayor Menino, Senate President Bulger, Mayor Flynn, and conductor Arthur Fiedler were all regulars; the diner earned the title of Boston Magazine's Best Diner in 2012 and has remained open around the clock.", "trivia_question": "What classic diner drink — served black in a thick ceramic mug and refilled without being asked — has fueled late-night Boston since the diner car era began in the 1920s?"}, {"neighborhood": "Mission Hill", "bar_name": "Mission Bar and Grill", "address": "724 Huntington Avenue, Boston, MA 02115", "year_established": "2007", "latitude": 42.3338, "longitude": -71.1051, "neighborhood_history": "Mission Hill takes its name from the Mission Church, the Basilica of Our Lady of Perpetual Help, whose twin Romanesque towers were completed in 1878 and remain the neighborhood's most visible landmark. Developed in the late 19th century as a dense working-class district, it sits at the edge of the Longwood Medical Area and has always been shaped by the hospitals and universities on its doorstep. The constant churn of students and medical workers makes long-standing establishments here rarer and more significant than in almost any other Boston neighborhood.", "bar_history": "Mission Bar and Grill opened in 2007 on Huntington Avenue in a neighborhood where institutional churn — students, medical workers, construction crews — means most businesses turn over within a few years. In Mission Hill, making it nearly two decades is its own kind of achievement. The bar serves 26 draft beers and overlooks Brigham Circle, the neighborhood's busiest intersection.", "trivia_question": "In 1984, a Boston-area brewery founded that same year launched a flagship lager now sold in all 50 states. What brewery was it?"}, {"neighborhood": "North End", "bar_name": "Caffe Vittoria", "address": "290-296 Hanover Street, Boston, MA 02113", "year_established": "1929", "latitude": 42.3642, "longitude": -71.0545, "neighborhood_history": "Boston's oldest residential neighborhood, the North End was settled by English colonists in the 1630s and has been continuously inhabited ever since. Successive immigrant communities have called it home, most recently Italian and Sicilian families who arrived in the late 19th and early 20th centuries and gave it the identity it retains today. Paul Revere's house on North Square, built around 1680, is the oldest remaining residential structure in downtown Boston.", "bar_history": "Caffe Vittoria opened in 1929, making it the oldest Italian café in Boston — a North End institution that has served espresso, pastries, and a full bar under its original tin ceilings and Venetian chandeliers for nearly a century. It is one of the very few licensed establishments in the neighborhood that predates World War II, and one of the few in the city that still feels genuinely continuous with its original era.", "trivia_question": "What dark, roasty beer style, associated with British and Irish brewing tradition, pairs best with a North End cannoli?"}, {"neighborhood": "Roslindale", "bar_name": "Pleasant Cafe", "address": "4515 Washington Street, Roslindale, MA 02131", "year_established": "1937", "latitude": 42.2844, "longitude": -71.1222, "neighborhood_history": "Roslindale was named in the 1880s by a local developer after Roslin, a village in Scotland, a deliberate piece of marketing designed to attract buyers to the new streetcar suburb being carved out of West Roxbury. The neighborhood emerged rapidly once the railway arrived, and its commercial square, anchored by Adams Park, remains largely intact from that era. The Pleasant Café's marquee neon sign, installed in 1949, is one of the few surviving vintage neon signs in Boston.", "bar_history": "The Pleasant Café opened in 1937, founded by Emelio Iantosca and his three brothers in a building that had been a family meat market since 1927. The Iantosca brothers sold the business to Jack Morgan and his partner Mr. Lynch in 1979; the Morgan family has run it ever since, maintaining the original recipes, the wood paneling, the Formica tabletops, and the portrait of JFK that has hung in the same spot since the 1960s. The marquee neon sign out front was installed in 1949 and is one of the last surviving vintage neon signs in Boston.", "trivia_question": "What cocktail — made with cranberry juice, vodka, triple sec, and lime — became synonymous with neighborhood bar culture in the 1990s?"}, {"neighborhood": "Roxbury", "bar_name": "Fort Hill Bar and Grill", "address": "2805 Washington Street, Boston, MA 02119", "year_established": "1925", "latitude": 42.3241, "longitude": -71.0927, "neighborhood_history": "One of Massachusetts' original English settlements, Roxbury was founded in 1630 and remained an independent city until it was annexed by Boston in 1868, its name thought to derive from the distinctive Roxbury puddingstone outcroppings that characterize the landscape, now the official state rock of Massachusetts. Before Prohibition, German immigrant breweries lined the Stony Brook valley; by the mid-20th century Roxbury had become the heart of Black culture in Boston, home to Malcolm X in his youth and a center of the civil rights movement. Nubian Square - renamed from Dudley Square in 2019 - remains a civic and cultural anchor.", "bar_history": "Fort Hill Bar and Grill has occupied this Washington Street address as a tavern since 1925, making it one of the oldest continuously operating bar spaces in Roxbury. Under the Pena family's ownership it now serves Dominican-American cuisine alongside its bar, a reflection of the neighborhood's current community — itself the product of profound demographic change over the century the building has been open. The site has served as a neighborhood gathering place across several distinct eras of Roxbury history, each one different from the last.", "trivia_question": "Before Prohibition, German immigrants lined Roxbury's Stony Brook valley with breweries producing the cold-fermented beer style they brought from Bavaria. What is it?"}, {"neighborhood": "South Boston", "bar_name": "Slade's Bar & Grill", "address": "958 Tremont Street, Boston, MA 02120", "year_established": "1928", "latitude": 42.3372, "longitude": -71.0837, "neighborhood_history": "One of Massachusetts' original English settlements, Roxbury was founded in 1630 and remained an independent city until it was annexed by Boston in 1868, its name thought to derive from the distinctive Roxbury puddingstone outcroppings that characterize the landscape, now the official state rock of Massachusetts. Before Prohibition, German immigrant breweries lined the Stony Brook valley; by the mid-20th century Roxbury had become the heart of Black culture in Boston, home to Malcolm X in his youth and a center of the civil rights movement. Nubian Square - renamed from Dudley Square in 2019 - remains a civic and cultural anchor.", "bar_history": "Slade's first opened in 1928 under founder Renner Slade, a North Carolina pitmaster who brought Eastern-style barbecue to Boston and built a restaurant that became a cornerstone of the Black community. Bill Russell purchased it in early 1964 and introduced live jazz, drawing Muhammad Ali, Martin Luther King Jr., and Malcolm X — who worked there as a server. Listed in the Negro Motorist Green Book from 1936 to 1966, it remains one of the very few Green Book establishments in New England still operating today.", "trivia_question": "Renner Slade, known as \"Boston's King of Barbecue,\" paired his food with a spirit distilled from fermented sugarcane, popular across the American South and Caribbean. What is it?"}, {"neighborhood": "South Boston", "bar_name": "Amrheins", "address": "80 West Broadway Street, Boston, MA 02127", "year_established": "1890", "latitude": 42.3336, "longitude": -71.0466, "neighborhood_history": "South Boston - known universally as Southie - was connected to the rest of the city by a drawbridge in 1805 and formally annexed in 1804, making it one of Boston's earliest additions. Despite its name, it sits east of downtown rather than south, a source of persistent geographic confusion. Shaped by Irish immigration from the mid-19th century onward, it built one of the most cohesive neighborhood identities in the city, one that survived Prohibition, the busing crisis, and the full force of 21st-century gentrification.", "bar_history": "Amrheins opened on West Broadway in 1890 and has been the oldest bar in South Boston ever since, outlasting fires, Prohibition, multiple ownership changes, and a development boom that has transformed nearly every building around it. It claims the oldest hand-carved bar in America and the first draft beer pump installed in Boston, both still on display. The building itself has been targeted for redevelopment more than once; the bar has survived each attempt.", "trivia_question": "Amrheins claims the first draft beer pump ever installed in Boston, still on display today. What style of British ale, served from a cask at cellar temperature, was that pump designed to pour?"}, {"neighborhood": "South End", "bar_name": "J.J. Foley's Cafe", "address": "117 E Berkeley Street, Boston, MA 02118", "year_established": "1909", "latitude": 42.3437, "longitude": -71.0653, "neighborhood_history": "The South End was built in the 1840s–1860s on filled land as a planned upper-class neighborhood - and briefly succeeded - until Back Bay was developed next door and drew its intended residents away. It then absorbed successive waves of Irish, Lebanese, Greek, and African American families before falling into urban decline and reviving again in the 1980s as one of Boston's most sought-after addresses. It claims the largest concentration of Victorian brick rowhouses in the United States.", "bar_history": "Jeremiah J. Foley, an immigrant from County Kerry, opened his café in 1909 — before Prohibition, before World War I, before most of the 20th century had happened. The pre-Prohibition bar is still intact, one of very few in the city that survived the intervening 115 years without being replaced. The Boston Herald press corps cashed their paychecks here for decades, and J.J. Foley's remains Boston's oldest Irish pub.", "trivia_question": "The Irish Coffee was invented in 1943 at Foynes Airport to warm transatlantic passengers. What Dublin whiskey brand, founded in 1780, is most commonly used in one today?"}, {"neighborhood": "West End", "bar_name": "Sullivan's Tap", "address": "168 Canal Street, Boston, MA 02114", "year_established": "1933", "latitude": 42.3664, "longitude": -71.0628, "neighborhood_history": "The West End was once a densely populated immigrant neighborhood occupying what is now the Massachusetts General Hospital campus and the blocks around TD Garden, home to Jewish, Italian, and Polish communities who built a thriving street life there. Between 1958 and 1960, urban renewal demolished nearly every building in the neighborhood, displacing approximately 7,500 families in what became one of the most infamous examples of mid-century planning in American history. The West End's erasure gave rise to the field of community planning as a discipline. Its residents' unsuccessful fight to stop demolition changed how American cities think about neighborhoods.", "bar_history": "Sullivan's Tap opened on December 5, 1933 — the day after Prohibition ended — making it Boston's oldest sports bar and one of the few establishments that has been continuously licensed in the West End across two entirely different eras of the neighborhood. The West End it opened into was a dense immigrant district of 7,500 families; within 30 years that neighborhood had been demolished entirely. Sully's stayed, cash only, no food, no frills, the longest bar in Boston by its own signage, stubbornly unchanged while everything around it was built, torn down, and built again.", "trivia_question": "Sullivan's opened on December 5, 1933 — the day Prohibition ended. What constitutional amendment, ratified that same day, made opening night possible?"}, {"neighborhood": "West Roxbury", "bar_name": "Corrib Pub", "address": "2030 Centre Street, West Roxbury, MA 02132", "year_established": "1988", "latitude": 42.2808, "longitude": -71.158, "neighborhood_history": "West Roxbury was carved out of old Roxbury in 1851 as its own town and annexed by Boston in 1874, giving it the unusual distinction of having never actually been part of the Roxbury it's named after. Brook Farm, the famous Transcendentalist commune that inspired Nathaniel Hawthorne's novel The Blithedale Romance, operated here from 1841 to 1847, attracting thinkers including Ralph Waldo Emerson. Today it is one of Boston's quietest and most suburban-feeling neighborhoods, with a Centre Street that functions more like a small-town main street than a city block.", "bar_history": "In December 1988, Martin, Angela, Hughie, and Mary Bligh purchased a bar called P.J. Cronin's on Centre Street and renamed it after Lough Corrib — the same lake that inspired the Brighton original Hughie had opened twenty years earlier. The two Corrib locations have operated as sibling pubs ever since, sharing a name, a family, and a menu but serving two distinct and fiercely local communities. The West Roxbury Corrib is the younger of the two by exactly two decades.", "trivia_question": "What ancient fermented honey drink, consumed by Norse and Celtic peoples for millennia, is experiencing a craft revival in New England today?"}, {"neighborhood": "Wharf District / Seaport", "bar_name": "The Barking Crab", "address": "88 Sleeper Street, Boston, MA 02210", "year_established": "1994", "latitude": 42.3537, "longitude": -71.0488, "neighborhood_history": "Boston's waterfront is one of the oldest working harbors in America but the Seaport District as it exists today is almost entirely a product of the early 21st century. As recently as the 1990s, this stretch was a desolate grid of parking lots and fish processing plants; the 1999 Seaport Public Realm Plan triggered one of the fastest urban transformations in Boston's history. The Barking Crab has been here since 1994, meaning it predates the neighborhood that grew up around it.", "bar_history": "The Barking Crab opened in 1994 on a waterfront that was, at the time, largely a wasteland of parking lots and fish-processing facilities — it was one of the only reasons anyone came to this part of the harbor. The Seaport boom that followed in the 2000s and 2010s transformed everything around it into one of the most expensive real estate markets in New England. The Crab has been here for all of it, and looks exactly the same as it did in 1994.", "trivia_question": "What citrus fruit was added to British sailors' rum rations to prevent scurvy — earning them the nickname \"Limeys\"?"}];
+
+const STORAGE_KEY = 'bbt2026_stamps';
+let stamped = new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'));
+let openCard = null;
+let currentView = 'passport';
+
+function isPre(y) { try { return parseInt(String(y).replace('c.','').trim()) < 1933; } catch(e) { return false; } }
+function accentCol(y) { return isPre(y) ? 'var(--coral)' : 'var(--teal-lt)'; }
+
+function save() { localStorage.setItem(STORAGE_KEY, JSON.stringify([...stamped])); }
+
+function updateProgress() {
+  const n = stamped.size, t = BARS.length, pct = (n/t*100).toFixed(1)+'%';
+  ['cov-fill','p-fill'].forEach(id => { const el=document.getElementById(id); if(el) el.style.width=pct; });
+  const countTxt = n+' / '+t+' stamped';
+  const el = document.getElementById('cov-count'); if(el) el.textContent = countTxt;
+  const pl = document.getElementById('p-label'); if(pl) pl.textContent = n+' of '+t+' stops stamped';
+  const pc = document.getElementById('p-count'); if(pc) pc.textContent = n+' / '+t;
+  const sc = document.getElementById('s-count'); if(sc) sc.textContent = n+' / '+t;
+}
+
+function show(view) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.querySelectorAll('.ntab').forEach(t => t.classList.remove('active'));
+  document.getElementById(view).classList.add('active');
+  const tab = document.getElementById('tab-'+view);
+  if(tab) tab.classList.add('active');
+  currentView = view;
+  if(view === 'stamps') buildStamps();
+  updateProgress();
+}
+
+function toggleStamp(idx, e) {
+  if(e) { e.stopPropagation(); }
+  if(stamped.has(idx)) stamped.delete(idx); else stamped.add(idx);
+  save();
+  updateProgress();
+  refreshCard(idx);
+  refreshStampTile(idx);
+  // Pop animation
+  const ring = document.getElementById('ring-'+idx);
+  if(ring && stamped.has(idx)) {
+    ring.classList.add('popping');
+    ring.addEventListener('animationend', () => ring.classList.remove('popping'), {once:true});
+  }
+}
+
+function toggleDetail(idx) {
+  const det = document.getElementById('det-'+idx);
+  if(!det) return;
+  if(openCard !== null && openCard !== idx) {
+    const prev = document.getElementById('det-'+openCard);
+    if(prev) prev.classList.remove('open');
+  }
+  det.classList.toggle('open');
+  openCard = det.classList.contains('open') ? idx : null;
+  if(det.classList.contains('open')) {
+    setTimeout(() => { det.scrollIntoView({behavior:'smooth',block:'nearest'}); }, 50);
+  }
+}
+
+function refreshCard(idx) {
+  const card = document.getElementById('card-'+idx);
+  const ring = document.getElementById('ring-'+idx);
+  if(!card || !ring) return;
+  const st = stamped.has(idx);
+  card.classList.toggle('stamped', st);
+  ring.classList.toggle('stamped', st);
+  // Update action button
+  const abtn = document.getElementById('abtn-'+idx);
+  if(abtn) {
+    abtn.textContent = st ? 'Remove Stamp' : 'Stamp This Stop';
+    abtn.className = 'act-btn ' + (st ? 'btn-unstamp' : 'btn-stamp');
+  }
+}
+
+function refreshStampTile(idx) {
+  const tile = document.getElementById('stile-'+idx);
+  if(!tile) return;
+  tile.classList.toggle('earned', stamped.has(idx));
+  const col = accentCol(BARS[idx].year_established);
+  tile.style.borderColor = stamped.has(idx) ? col : '';
+}
+
+function buildList() {
+  const list = document.getElementById('bar-list');
+  list.innerHTML = '';
+  BARS.forEach((bar, idx) => {
+    const pre = isPre(bar.year_established);
+    const col = accentCol(bar.year_established);
+    const st = stamped.has(idx);
+    const card = document.createElement('div');
+    card.className = 'bar-card' + (st ? ' stamped' : '');
+    card.id = 'card-'+idx;
+    card.innerHTML =
+      '<div class="card-top" onclick="toggleDetail('+idx+')">' +
+        '<div class="card-num">'+(idx+1)+'</div>' +
+        '<div class="card-info">' +
+          '<div class="card-nb" style="color:'+col+'">'+bar.neighborhood+'</div>' +
+          '<div class="card-name">'+bar.bar_name+'</div>' +
+          '<div class="card-yr">Est. '+bar.year_established+' &nbsp;·&nbsp; '+bar.address+'</div>' +
+        '</div>' +
+        '<div class="stamp-ring'+(st?' stamped':'')+'" id="ring-'+idx+'" onclick="toggleStamp('+idx+',event)">' +
+          '<svg fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12l5 5L19 7"/></svg>' +
+        '</div>' +
+      '</div>' +
+      '<div class="card-detail" id="det-'+idx+'">' +
+        '<span class="det-lbl" style="color:'+col+'">Neighborhood</span>' +
+        '<p class="det-txt">'+bar.neighborhood_history+'</p>' +
+        '<span class="det-lbl" style="color:var(--orange)">The Bar</span>' +
+        '<p class="det-txt">'+bar.bar_history+'</p>' +
+        '<div class="trivia-card">' +
+          '<span class="trivia-lbl">Trivia — order the answer</span>' +
+          '<p class="trivia-q">'+bar.trivia_question+'</p>' +
+          '<div class="answer-row">' +
+            '<span class="answer-lbl">Your answer</span>' +
+            '<div class="answer-line"></div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="action-row">' +
+          '<button class="act-btn '+(st?'btn-unstamp':'btn-stamp')+'" id="abtn-'+idx+'" onclick="toggleStamp('+idx+',event)">'+(st?'Remove Stamp':'Stamp This Stop')+'</button>' +
+          '<a class="btn-map" href="https://maps.google.com/?q='+encodeURIComponent(bar.address)+'" target="_blank">Map</a>' +
+        '</div>' +
+      '</div>';
+    list.appendChild(card);
+  });
+}
+
+function buildStamps() {
+  const grid = document.getElementById('stamps-grid');
+  grid.innerHTML = '';
+  BARS.forEach((bar, idx) => {
+    const col = accentCol(bar.year_established);
+    const st = stamped.has(idx);
+    const tile = document.createElement('div');
+    tile.className = 's-tile' + (st ? ' earned' : '');
+    tile.id = 'stile-'+idx;
+    if(st) tile.style.borderColor = col;
+    tile.innerHTML =
+      '<div class="s-tile-num" style="'+(st?'color:'+col:'')+'">'+( idx+1)+'</div>' +
+      '<div class="s-tile-name">'+bar.bar_name.replace(' (Chinatown)','').replace(' (Leather District)','')+'</div>';
+    tile.onclick = () => { show('passport'); setTimeout(() => { toggleDetail(idx); document.getElementById('card-'+idx)?.scrollIntoView({behavior:'smooth',block:'start'}); }, 100); };
+    grid.appendChild(tile);
+  });
+}
+
+// Init
+buildList();
+updateProgress();
+show('passport');
+</script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Boston Historical Bars Tour 2026</name>
+    <description>26 stops · 23 neighborhoods · Est. 1630. Visit every bar. Answer the trivia. Order the answer.</description>
+    <Style id="pre1933">
+      <IconStyle>
+        <color>ff8B2DFF</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/paddle/pink-blank.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0.8</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text>$[description]</text>
+      </BalloonStyle>
+    </Style>
+    <Style id="post1933">
+      <IconStyle>
+        <color>ff888888</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0.8</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text>$[description]</text>
+      </BalloonStyle>
+    </Style>
+    <Folder>
+      <name>Pre-1933 — Revolutionary &amp; Prohibition Era</name>
+      <description>Bars established before Prohibition ended in 1933. These establishments survived the 18th Amendment, urban renewal, and over two centuries of Boston history.</description>
+      <Placemark>
+        <name>6. Warren Tavern</name>
+        <styleUrl>#pre1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 6 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; Charlestown&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 1780&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 2 Pleasant St, Charlestown, MA 02129&lt;br&gt;&lt;br&gt;Built in 1780 from beams salvaged at the Charlestown Navy Yard — one of the first structures raised after British troops burned Charlestown during the Battle of Bunker Hill. Paul Revere presided here as Grand Master of the Freemasons, and George Washington visited in 1789.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; What herbal ingredient — once prescribed by colonial doctors — became a staple of the American cocktail and is found in both an Old Fashioned and a Manhattan?]]&gt;</description>
+        <Point>
+          <coordinates>-71.0632,42.3742,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>10. Bell in Hand Tavern</name>
+        <styleUrl>#pre1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 10 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; Downtown&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 1795&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 45 Union St, Boston, MA 02108&lt;br&gt;&lt;br&gt;Jimmy Wilson, Boston's last Town Crier, opened the Bell in Hand in 1795 when he retired after fifty years on the job. He refused to sell hard liquor, serving only ale for the tavern's first century. It is America's oldest continuously operating tavern.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; Founder Jimmy Wilson served only ale and refused all spirits. What style of beer would a colonial-era patron have ordered?]]&gt;</description>
+        <Point>
+          <coordinates>-71.0571,42.3616,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>18. Caffe Vittoria</name>
+        <styleUrl>#pre1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 18 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; North End&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 1929&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 290-296 Hanover St, Boston, MA 02113&lt;br&gt;&lt;br&gt;Caffe Vittoria opened in 1929 — the oldest Italian cafe in Boston — serving espresso, pastries, and a full bar under its original tin ceilings and Venetian chandeliers for nearly a century.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; What dark, roasty beer style, associated with British and Irish brewing tradition, pairs best with a North End cannoli?]]&gt;</description>
+        <Point>
+          <coordinates>-71.0545,42.3642,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>20. Fort Hill Bar and Grill</name>
+        <styleUrl>#pre1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 20 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; Roxbury&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 1925&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 2805 Washington St, Boston, MA 02119&lt;br&gt;&lt;br&gt;Fort Hill Bar and Grill has occupied this address as a tavern since 1925. Under the Pena family's ownership it now serves Dominican-American cuisine, reflecting the profound demographic change over the century the building has been open.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; Before Prohibition, German immigrants lined Roxbury's Stony Brook valley with breweries. What cold-fermented beer style did they bring from Bavaria?]]&gt;</description>
+        <Point>
+          <coordinates>-71.0927,42.3241,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>21. Slade's Bar &amp; Grill</name>
+        <styleUrl>#pre1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 21 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; South Boston&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 1928&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 958 Tremont St, Boston, MA 02120&lt;br&gt;&lt;br&gt;Slade's first opened in 1928 under Renner Slade, a North Carolina pitmaster. Bill Russell purchased it in 1964, introducing live jazz and drawing Muhammad Ali, Martin Luther King Jr., and Malcolm X — who worked there as a server. Listed in the Negro Motorist Green Book 1936-1966.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; Renner Slade, known as 'Boston's King of Barbecue,' paired his food with a spirit distilled from fermented sugarcane. What is it?]]&gt;</description>
+        <Point>
+          <coordinates>-71.0837,42.3372,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>22. Amrheins</name>
+        <styleUrl>#pre1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 22 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; South Boston&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 1890&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 80 West Broadway, South Boston, MA 02127&lt;br&gt;&lt;br&gt;Amrheins opened in 1890 and has been the oldest bar in South Boston ever since. It claims the oldest hand-carved bar in America and the first draft beer pump installed in Boston, both still on display.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; Amrheins claims the first draft beer pump ever installed in Boston. What style of British ale, served from a cask at cellar temperature, was it designed to pour?]]&gt;</description>
+        <Point>
+          <coordinates>-71.0551,42.3418,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>23. J.J. Foley's Cafe</name>
+        <styleUrl>#pre1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 23 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; South End&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 1909&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 117 E Berkeley St, Boston, MA 02118&lt;br&gt;&lt;br&gt;Jeremiah J. Foley opened his cafe in 1909 — before Prohibition, before World War I. The pre-Prohibition bar is still intact. J.J. Foley's remains Boston's oldest Irish pub.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; The Irish Coffee was invented in 1943 at Foynes Airport. What Dublin whiskey brand, founded in 1780, is most commonly used in one today?]]&gt;</description>
+        <Point>
+          <coordinates>-71.0653,42.3437,0</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Post-1933 — Modern Era</name>
+      <description>Bars established after Prohibition ended on December 5, 1933.</description>
+      <Placemark>
+        <name>1. Silhouette Lounge</name>
+        <styleUrl>#post1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 1 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; Allston&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 1964&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 200 Brighton Ave, Allston, MA 02134&lt;br&gt;&lt;br&gt;Named after a doo-wop group, the Silhouette opened in 1964 — the exact year doo-wop was swept aside by the British Invasion. It has survived the student waves and rent increases that have transformed almost everything else on Brighton Avenue.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; In 1964, Congress declared one American spirit a 'distinctive product of the United States.' What was it?]]&gt;</description>
+        <Point>
+          <coordinates>-71.1344,42.3531,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>2. Oak Long Bar + Kitchen</name>
+        <styleUrl>#post1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 2 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; Back Bay&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 2013&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 138 St James Ave, Boston, MA 02116&lt;br&gt;&lt;br&gt;The Copley Plaza opened in 1912 and its bar survived Prohibition by reinventing itself as the Merry-Go-Round Bar — complete with a working carousel. When redesigned as OAK Long Bar in 2013, the designers had to source new oak and put it back.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; The Copley Plaza's bar survived Prohibition as the Merry-Go-Round Bar. What gin-based cocktail, served in a V-shaped glass with an olive, was the signature drink of golden age hotel bars?]]&gt;</description>
+        <Point>
+          <coordinates>-71.0762,42.3491,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>3. Jacques Cabaret</name>
+        <styleUrl>#post1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 3 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; Bay Village&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 1938&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 79 Broadway St, Boston, MA 02116&lt;br&gt;&lt;br&gt;Jacques opened in 1938 as a neighborhood tavern, became a gay bar by the mid-1940s, and served as Boston's only lesbian bar during the early 1970s — making it the oldest continuously operating LGBTQ+ establishment in the city.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; What sparkling wine, named after a region in northeastern France, is traditionally associated with celebration and cabaret culture?]]&gt;</description>
+        <Point>
+          <coordinates>-71.0674,42.35,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>4. Sevens Ale House</name>
+        <styleUrl>#post1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 4 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; Beacon Hill&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 1933&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 77 Charles St, Boston, MA 02114&lt;br&gt;&lt;br&gt;The Sevens opened the year Prohibition ended — 1933 — and has sold only beer and wine ever since. One of only two Boston bars to tap the very first kegs of Harpoon Ale on June 2, 1987.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; On June 2, 1987, the Sevens tapped the first kegs of a brewery that held Massachusetts Brewing Permit #001. What brewery was it?]]&gt;</description>
+        <Point>
+          <coordinates>-71.0704,42.3583,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>5. Corrib Pub</name>
+        <styleUrl>#post1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 5 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; Brighton&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 1968&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 396 Market St, Brighton, MA 02135&lt;br&gt;&lt;br&gt;In 1968, Hughie Bligh bought a bar called McMahon's and renamed it after Lough Corrib — the second-largest lake in Ireland, near where Bligh grew up.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; What dark Irish stout, first brewed at St. James's Gate Brewery in Dublin in 1759, would founder Hughie Bligh have grown up drinking?]]&gt;</description>
+        <Point>
+          <coordinates>-71.1528,42.3499,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>7. The Tam</name>
+        <styleUrl>#post1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 7 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; Chinatown / Leather District&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 1940&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 222 Tremont St, Boston, MA 02116&lt;br&gt;&lt;br&gt;The Tam opened sometime in the 1940s on Tremont Street — cash only, no frills, still operating while the neighborhood around it has been almost entirely rebuilt.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; Boston's sailors drank a distinctive shipboard mixture of rum cut with water and sometimes lime juice. What was it called?]]&gt;</description>
+        <Point>
+          <coordinates>-71.0646,42.3515,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>8. China Pearl</name>
+        <styleUrl>#post1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 8 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; Chinatown / Leather District&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 1960&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 9 Tyler St, Boston, MA 02111&lt;br&gt;&lt;br&gt;China Pearl has been the oldest Chinese restaurant in Boston since it opened in 1960, though the building housed Chinese dining as far back as 1935. The Moy family has been part of Chinatown since the 1880s.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; What rum-based tiki cocktail, invented in 1944 by Trader Vic Bergeron, became one of the most ordered drinks of the mid-century tiki era?]]&gt;</description>
+        <Point>
+          <coordinates>-71.0608,42.351,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>9. Eire Pub</name>
+        <styleUrl>#post1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 9 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; Dorchester&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 1963&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 795 Adams St, Boston, MA 02124&lt;br&gt;&lt;br&gt;Founded in 1963 by Tom Stenson, an Irish immigrant. Presidents Reagan and Clinton visited, as did the Irish Taoiseach. Jimmy Hayes' first NHL jersey still hangs on the wall.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; What spirit, distilled from malted barley and aged in oak, is Ireland's most famous export and the backbone of an Irish Coffee?]]&gt;</description>
+        <Point>
+          <coordinates>-71.0561,42.283,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>11. Kelley Square Pub</name>
+        <styleUrl>#post1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 11 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; East Boston&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 1984&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 84 Bennington St, Boston, MA 02128&lt;br&gt;&lt;br&gt;John Mastrangelo Sr. opened the pub in 1984 and named it after the original 1900s name for what had become Central Square. His insistence helped restore Kelley Square to the official maps of East Boston.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; What style of rum — distilled from molasses — made colonial Massachusetts one of the rum capitals of the 18th century?]]&gt;</description>
+        <Point>
+          <coordinates>-71.0358,42.3762,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>12. Cask 'n Flagon</name>
+        <styleUrl>#post1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 12 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; Fenway / Kenmore&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 1969&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 62 Brookline Ave, Boston, MA 02215&lt;br&gt;&lt;br&gt;The building was originally a Ford dealership. In the 1960s it became Oliver's, where Bruce Springsteen, Jimi Hendrix, and the band Boston all performed before it was rechristened the Cask 'n Flagon in 1969.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; What beer cocktail — made by dropping a shot of whiskey into a pint — is the traditional pregame drink of Red Sox fans?]]&gt;</description>
+        <Point>
+          <coordinates>-71.0983,42.3473,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>13. Roundhead Brewing</name>
+        <styleUrl>#post1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 13 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; Hyde Park&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 2022&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 1 Westinghouse Plaza, Hyde Park, MA 02136&lt;br&gt;&lt;br&gt;Luis Espinoza and Craig Panzer founded Roundhead Brewing in 2022 inside the 1903 Westinghouse Powerhouse building. Massachusetts' first Latino-owned brewery, named Best Brewery in Boston by Boston Magazine in 2023.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; What Cuban cocktail, made with white rum, lime juice, sugar, and mint, is the most widely consumed Latin cocktail in the world?]]&gt;</description>
+        <Point>
+          <coordinates>-71.1311,42.2467,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>14. Midway Cafe</name>
+        <styleUrl>#post1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 14 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; Jamaica Plain&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 1937&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 3496 Washington St, Boston, MA 02130&lt;br&gt;&lt;br&gt;The building opened as a bar in 1937. When the elevated Orange Line came down in 1988 the neighborhood changed overnight. In 1999, Queeraoke on Thursdays became one of the longest-running queer nights in New England.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; On April 7, 1933, the Cullen-Harrison Act made beer legal again. Which St. Louis brewery is most widely credited with delivering the first post-Prohibition commercial beer?]]&gt;</description>
+        <Point>
+          <coordinates>-71.1075,42.3062,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>15. Simco's on the Bridge</name>
+        <styleUrl>#post1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 15 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; Mattapan&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 1936&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 1509 Blue Hill Ave, Mattapan, MA 02126&lt;br&gt;&lt;br&gt;Simco's has been a fixture on Blue Hill Avenue since the 1930s, famous for hot dogs, fried seafood, and eating on the bridge railing out front. As recently as 2013, Mattapan held just two liquor licenses despite a population of over 35,000.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; Simco's signature drink is a Boston original invented at a Washington Street drugstore in the 1880s — lime juice, raspberry syrup, soda water. What is it called?]]&gt;</description>
+        <Point>
+          <coordinates>-71.0921,42.2699,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>16. Victoria's Diner</name>
+        <styleUrl>#post1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 16 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; Mid-Dorchester&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 1949&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 1024 Massachusetts Ave, Boston, MA 02118&lt;br&gt;&lt;br&gt;Opened in 1949 by George Georgenes, Victoria's was a brand-new stainless steel Jerry O'Mahony diner car. Mayor Menino, Senate President Bulger, Mayor Flynn, and conductor Arthur Fiedler were all regulars.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; What classic diner drink — served black in a thick ceramic mug and refilled without being asked — has fueled late-night Boston since the 1920s?]]&gt;</description>
+        <Point>
+          <coordinates>-71.0724,42.3299,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>17. Mission Bar and Grill</name>
+        <styleUrl>#post1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 17 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; Mission Hill&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 2007&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 724 Huntington Ave, Boston, MA 02115&lt;br&gt;&lt;br&gt;Mission Bar and Grill opened in 2007 in a neighborhood where most businesses turn over within a few years. In Mission Hill, making it nearly two decades is its own kind of achievement.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; In 1984, a Boston-area brewery launched a flagship lager now sold in all 50 states. What brewery was it?]]&gt;</description>
+        <Point>
+          <coordinates>-71.1051,42.3338,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>19. Pleasant Cafe</name>
+        <styleUrl>#post1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 19 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; Roslindale&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 1937&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 4515 Washington St, Roslindale, MA 02131&lt;br&gt;&lt;br&gt;The Pleasant Cafe opened in 1937, founded by Emelio Iantosca and his brothers. The Morgan family has run it since 1979, maintaining the original recipes, wood paneling, Formica tabletops, and the portrait of JFK in the same spot since the 1960s.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; What cocktail — made with cranberry juice, vodka, triple sec, and lime — became synonymous with neighborhood bar culture in the 1990s?]]&gt;</description>
+        <Point>
+          <coordinates>-71.1222,42.2844,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>24. Sullivan's Tap</name>
+        <styleUrl>#post1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 24 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; West End&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 1933&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 168 Canal St, Boston, MA 02114&lt;br&gt;&lt;br&gt;Sullivan's Tap opened December 5, 1933 — the day after Prohibition ended. The dense immigrant neighborhood it opened into was demolished within 30 years. Sully's stayed: cash only, no food, no frills.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; Sullivan's opened December 5, 1933 — the day Prohibition ended. What constitutional amendment, ratified that same day, made opening night possible?]]&gt;</description>
+        <Point>
+          <coordinates>-71.061,42.365,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>25. Corrib Pub</name>
+        <styleUrl>#post1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 25 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; West Roxbury&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 1988&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 2030 Centre St, West Roxbury, MA 02132&lt;br&gt;&lt;br&gt;In December 1988, the Bligh family purchased P.J. Cronin's on Centre Street and renamed it after Lough Corrib — the same lake that inspired the Brighton original opened twenty years earlier.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; What ancient fermented honey drink, consumed by Norse and Celtic peoples for millennia, is experiencing a craft revival in New England today?]]&gt;</description>
+        <Point>
+          <coordinates>-71.158,42.2808,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>26. The Barking Crab</name>
+        <styleUrl>#post1933</styleUrl>
+        <description>&lt;![CDATA[&lt;b&gt;Stop 26 of 26&lt;/b&gt;&lt;br&gt;&lt;b&gt;Neighborhood:&lt;/b&gt; Wharf District / Seaport&lt;br&gt;&lt;b&gt;Est.&lt;/b&gt; 1994&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; 88 Sleeper St, Boston, MA 02210&lt;br&gt;&lt;br&gt;The Barking Crab opened in 1994 when the Seaport was largely a wasteland of parking lots. The Seaport boom transformed everything around it. The Crab looks exactly the same as it did in 1994.&lt;br&gt;&lt;br&gt;&lt;b&gt;🍺 Trivia:&lt;/b&gt; What citrus fruit was added to British sailors' rum rations to prevent scurvy — earning them the nickname 'Limeys'?]]&gt;</description>
+        <Point>
+          <coordinates>-71.0488,42.3537,0</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
