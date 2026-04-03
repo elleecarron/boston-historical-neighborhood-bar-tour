@@ -7,7 +7,8 @@ LINKS
 
 COMMUNICATION
 - I can facilitate a text group, this Facebook page, or WhatsApp. Post your preference in the comments, or text or DM me directly. I have had terrible luck in organizing in the past so let's go with the flow this time.
-
+- Facebook @carronelizabeth
+- Inst @thealizabe
 THE GOAL
 1. Visit all 26 bars across 23 Boston neighborhoods.
 2. Collect stamps.
