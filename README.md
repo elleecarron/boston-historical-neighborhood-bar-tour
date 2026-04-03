@@ -12,7 +12,7 @@ Welcome to my version of celebrating America's 250th birthday, where we explore 
 - [Shortcut open the interactive digital passport](https://elleecarron.github.io/boston-historical-neighborhood-bar-tour/)
 
 
-The map and digital passport with works in any broswser, but you'll want to stick to one device. Your stamps will save as a temporary local file on it. 
+The map and digital passport with works in any browser, but you'll want to stick to one device. Your stamps will save as a temporary local file on it. 
 
 
 # Communication preferences #
