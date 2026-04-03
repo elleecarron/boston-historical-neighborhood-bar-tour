@@ -1,19 +1,13 @@
 Welcome to my version of celebrating America's 250th birthday - exploring the communities that make a home and give us a reason to care. Enough soapboxing. There was so much interest in this that I've had to get creative. Caveat: I am not Facebook friends with everyone. I rarely use FB these days. My page is a little hard to find if you know me as Beth Carron. Please feel free to share my information. Permissions are set so that guests can invite friends.
 
-LINKS
-- Google Map: https://www.google.com/maps/d/edit...
-- Digital passport book: Welcome to my version of celebrating America's 250th birthday - exploring the communities that make a home and give us a reason to care. Enough soapboxing.
-
-There was so much interest in this that I've had to get creative. Caveat: I am not Facebook friends with everyone. I rarely use FB these days. My page is a little hard to find if you know me as Beth Carron. Please feel free to share my information. Permissions are set so that guests can invite friends. 
-
 
 LINKS
+
+I posted the rules, the html, a PDF copy of the passport book, and the calendar import to my Github: https://github.com/elleecarron/boston-historical-neighborhood-bar-tour
 
 - Google Map: https://www.google.com/maps/d/edit?mid=1ewU5_wi6njqh5ZxD6L0z03i-OB_ZVRc&usp=sharing
 
 - Digital passport book: https://elleecarron.github.io/boston-historical-neighborhood-bar-tour/
-
-- I posted the rules, the html, a PDF copy of the passport book, and the calendar import to my Github: https://github.com/elleecarron/boston-historical-neighborhood-bar-tour
 
 
 COMMUNICATION
